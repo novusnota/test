@@ -7,7 +7,7 @@ jobs:
   docs-release-gate:
     uses: novusnota/test-docs/.github/workflows/docs-release-gate.yml@main
     with:
-      should_error: false # that's the default
+      should_error: true # defaults to false (for now)
       require_same_author: true # defaults to false
       label_name: "needs-ton-docs" # that's the default
       from_branch: "test" # defaults to "*", which means any branch
