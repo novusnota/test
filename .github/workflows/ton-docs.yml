@@ -1,9 +1,11 @@
+name: TON Docs
 on:
   pull_request_target:
     types: [opened, edited, labeled, unlabeled]
 permissions: read-all
 jobs:
   docs-release-gate:
+    name: "Has a linked PR"
     uses: novusnota/test-docs/.github/workflows/docs-release-gate.yml@main
     with:
       should_error: false # that's the default
